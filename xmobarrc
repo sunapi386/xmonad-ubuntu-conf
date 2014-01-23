@@ -15,7 +15,7 @@ Config {
   -- the height of xmobar is controlled by the font you use.
   font = "xft:Ubuntu Mono-14",
   bgColor = "black",
-  fgColor = "grey",
+  fgColor = "green",
 
   -- Position is top left, taking up 95% of screen.
   -- You are likely to have to tweak the width here based on the width
@@ -45,10 +45,10 @@ Config {
     -- Battery information. This is likely to require some customization
     -- based upon your specific hardware. Or, for a desktop you may want
     -- to just remove this section entirely.
-    Run Battery [
+    Run BatteryP ["BAT0"] [
       "-t", "<acstatus>: <left>%", 
       "--", 
-      "-c", "charge_full",
+      "-c", "energy_full",
       "-O", "AC",
       "-o", "Bat",
       "-h", "green",
