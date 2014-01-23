@@ -39,8 +39,8 @@ Config {
       "-t","Mem: <usedratio>%"
     ] 10,
 
-    -- Date formatting
-    Run Date "%a %b %_d %l:%M" "date" 10,
+    -- Date formatting, see http://www.cplusplus.com/reference/ctime/strftime/
+    Run Date "%a %b %_d %H:%M:%S" "date" 0,
 
     -- Battery information. This is likely to require some customization
     -- based upon your specific hardware. Or, for a desktop you may want
