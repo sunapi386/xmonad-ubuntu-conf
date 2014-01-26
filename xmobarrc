@@ -15,7 +15,7 @@ Config {
   -- the height of xmobar is controlled by the font you use.
   font = "xft:Ubuntu Mono-14",
   bgColor = "black",
-  fgColor = "green",
+  fgColor = "grey",
 
   -- Position is top left, taking up 95% of screen.
   -- You are likely to have to tweak the width here based on the width

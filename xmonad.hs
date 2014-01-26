@@ -39,7 +39,7 @@ import Data.Ratio ((%))
   simpler parts of xmonad's behavior and are straightforward to tweak.
 -}
 
-myModMask            = mod4Mask       -- changes the mod key to "super"
+myModMask            = mod4Mask       -- changes the mod key to "alt" (4=super)
 myFocusedBorderColor = "#00ff06"      -- color of focused border
 myNormalBorderColor  = "#cccccc"      -- color of inactive border
 myBorderWidth        = 5              -- width of border around windows
@@ -52,7 +52,7 @@ myIMRosterTitle      = "Contact List" -- title of roster on IM workspace
   of text which xmonad is sending to xmobar via the DynamicLog hook.
 -}
 
-myTitleColor     = "#eeeeee"  -- color of window title
+myTitleColor     = "#00ff06"  -- color of window title
 myTitleLength    = 80         -- truncate window title to this length
 myCurrentWSColor = "#e6744c"  -- color of active workspace
 myVisibleWSColor = "#c185a7"  -- color of inactive workspace
@@ -200,8 +200,8 @@ myLayouts =
 myKeyBindings =
   [
     ((myModMask, xK_b), sendMessage ToggleStruts)
-    , ((myModMask, xK_a), sendMessage MirrorShrink)
-    , ((myModMask, xK_z), sendMessage MirrorExpand)
+    , ((myModMask, xK_a), sendMessage Shrink)
+    , ((myModMask, xK_s), sendMessage Expand)
     , ((myModMask, xK_p), spawn "synapse")
     , ((myModMask, xK_u), focusUrgent)
     , ((0, 0x1008FF12), spawn "amixer -q set Master toggle")
