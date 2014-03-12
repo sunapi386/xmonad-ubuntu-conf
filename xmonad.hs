@@ -11,7 +11,8 @@
     4. Repeat
 
   Author:     David Brewer
-  Repository: https://github.com/davidbrewer/xmonad-ubuntu-conf
+  Maintainer: Jason Sun
+  Repository: https://github.com/sunapi386/xmonad-ubuntu-conf
 -}
 
 import XMonad
@@ -30,6 +31,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Actions.Plane
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.UrgencyHook
+import XMonad.Hooks.ICCCMFocus
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import Data.Ratio ((%))
@@ -348,7 +350,7 @@ main = do
   , manageHook = manageHook defaultConfig
       <+> composeAll myManagementHooks
       <+> manageDocks
-  , logHook = dynamicLogWithPP $ xmobarPP {
+  , logHook = takeTopFocus <+> dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc
       , ppTitle = xmobarColor myTitleColor "" . shorten myTitleLength
       , ppCurrent = xmobarColor myCurrentWSColor ""
