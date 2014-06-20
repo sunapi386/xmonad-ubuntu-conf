@@ -90,11 +90,11 @@ myWorkspaces =
   [
     "7",  "8", "9",
     "4",  "5", "6",
-    "1:ref",  "2:dev", "3:msc",
+    "1",  "2", "3",
     "0",    "Extr1", "Extr2"
   ]
 
-startupWorkspace = "2:dev"  -- which workspace do you want to be on after launch?
+startupWorkspace = "2"  -- which workspace do you want to be on after launch?
 
 {-
   Layout configuration. In this section we identify which xmonad
